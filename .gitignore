@@ -1,0 +1,7 @@
+backend/target/
+backend/jdk17/
+backend/jdk17.zip
+backend/maven.zip
+frontend/node_modules/
+frontend/dist/
+.DS_Store
