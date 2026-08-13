@@ -2,7 +2,7 @@ import axios from 'axios';
 import useAuthStore from '../store/authStore';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api',
+  baseURL: import.meta.env.PROD ? 'https://backend-production-c7a39.up.railway.app/api' : 'http://localhost:8080/api',
 });
 
 api.interceptors.request.use((config) => {

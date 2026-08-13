@@ -265,7 +265,7 @@ const Dashboard = () => {
                     <h3 className="text-xl font-bold text-brand-600">{selectedApplication.seekerName}</h3>
                     <p className="text-sm text-slate-500 mb-2">{selectedApplication.seekerEmail} • {selectedApplication.seekerPhone}</p>
                     {selectedApplication.resumeUrl && (
-                      <a href={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace('/api', '') : 'http://localhost:8080'}${selectedApplication.resumeUrl}`} target="_blank" rel="noreferrer" className="inline-block bg-brand-50 text-brand-700 px-3 py-1.5 rounded text-xs font-bold border border-brand-100 hover:bg-brand-100 transition-colors">
+                      <a href={`${import.meta.env.PROD ? 'https://backend-production-c7a39.up.railway.app' : 'http://localhost:8080'}${selectedApplication.resumeUrl}`} target="_blank" rel="noreferrer" className="inline-block bg-brand-50 text-brand-700 px-3 py-1.5 rounded text-xs font-bold border border-brand-100 hover:bg-brand-100 transition-colors">
                         View Resume (PDF)
                       </a>
                     )}
@@ -393,7 +393,7 @@ const Dashboard = () => {
                       <input type="file" accept=".pdf" className="hidden" onChange={handleFileUpload} disabled={isUploadingResume} />
                     </label>
                     {profile.resumeUrl && (
-                      <a href={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace('/api', '') : 'http://localhost:8080'}${profile.resumeUrl}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700 underline">
+                      <a href={`${import.meta.env.PROD ? 'https://backend-production-c7a39.up.railway.app' : 'http://localhost:8080'}${profile.resumeUrl}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-brand-600 hover:text-brand-700 underline">
                         View Current Resume
                       </a>
                     )}
